@@ -14,13 +14,10 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
 
-      - name: Change directory to as_blog
-        run: cd as_blog
-
       - name: Build and deploy
         uses: shalzz/zola-deploy-action@v0.18.0
         with:
-          dist_dir: public
-          working_dir: as_blog
+          args: as_blog
         env:
+          ZOLA_VERSION: latest
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
