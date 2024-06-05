@@ -7,30 +7,17 @@ on:
 
 jobs:
   build:
-    name: Publish site
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-
-      - name: Install Zola
-        run: |
-          curl -sSf https://sh.rustup.rs | sh -s -- -y
-          source $HOME/.cargo/env
-          cargo install zola
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Build and deploy
-        run: |
-          cd as_blog
-          zola build
-          echo "Deploying to GitHub Pages..."
-          git init
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git checkout -b gh-pages
-          cp -r public/* .
-          git add .
-          git commit -m "Deploy Zola site"
-          git push origin gh-pages --force
+        uses: shalzz/zola-deploy-action@v0.18.0
+        with:
+          working_dir: as_blog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ZOLA_VERSION: latest
+
