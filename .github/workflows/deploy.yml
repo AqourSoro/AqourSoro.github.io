@@ -14,6 +14,12 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
 
+      - name: Install Zola
+        run: |
+          curl -sSf https://sh.rustup.rs | sh -s -- -y
+          source $HOME/.cargo/env
+          cargo install zola
+
       - name: Build and deploy
         run: |
           cd as_blog
@@ -26,3 +32,5 @@ jobs:
           git add .
           git commit -m "Deploy Zola site"
           git push origin gh-pages --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
