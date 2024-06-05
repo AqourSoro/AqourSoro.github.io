@@ -13,9 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Install Zola
+        run: |
+          wget https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          tar -xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+          mv zola /usr/local/bin
+
       - name: Build Zola site
         run: |
-          cd as_blog
+          cd as_blog  # 如果你的 Zola 项目在子目录中
           zola build
 
       - name: Copy CNAME file
