@@ -1,18 +1,26 @@
 name: Zola on GitHub Pages
 
-on: 
- push:
-  branches:
-   - main
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     name: Publish site
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v4
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.18.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Change directory to as_blog
+        run: cd as_blog
+
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.18.0
+        with:
+          dist_dir: public
+          working_dir: as_blog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
