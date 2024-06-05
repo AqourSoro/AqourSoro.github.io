@@ -15,9 +15,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build and deploy
-        uses: shalzz/zola-deploy-action@v0.18.0
-        with:
-          args: as_blog
-        env:
-          ZOLA_VERSION: latest
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd as_blog
+          zola build
+          echo "Deploying to GitHub Pages..."
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git checkout -b gh-pages
+          cp -r public/* .
+          git add .
+          git commit -m "Deploy Zola site"
+          git push origin gh-pages --force
