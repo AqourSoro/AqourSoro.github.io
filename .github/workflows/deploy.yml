@@ -1,4 +1,4 @@
-name: Zola on GitHub Pages
+name: Deploy Zola Site
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,9 +15,6 @@ jobs:
 
       - name: Build and deploy
         uses: shalzz/zola-deploy-action@v0.18.0
-        with:
-          working_dir: as_blog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ZOLA_VERSION: latest
-
+          BUILD_DIR: as_blog  # 如果你的 Zola 项目在子目录中，否则删除这一行
