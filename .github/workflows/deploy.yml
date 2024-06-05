@@ -13,8 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build and deploy
-        uses: shalzz/zola-deploy-action@v0.18.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_DIR: as_blog  # 如果你的 Zola 项目在子目录中，否则删除这一行
+      - name: Build Zola site
+        run: |
+          cd as_blog
+          zola build
+
+      - name: Copy CNAME file
+        run: cp as_blog/CNAME as_blog/public/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: as_blog/public
