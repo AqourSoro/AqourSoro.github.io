@@ -21,11 +21,11 @@ jobs:
 
       - name: Build Zola site
         run: |
-          cd as_blog  # 如果你的 Zola 项目在子目录中
+          cd as_blog
           zola build
 
       - name: Copy CNAME file
-        run: cp as_blog/CNAME as_blog/public/CNAME
+        run: cp CNAME as_blog/public/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
