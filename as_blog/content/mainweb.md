@@ -4,4 +4,4 @@ date = 2024-06-05
 draft = false
 +++
 
-Test if all workflow is correct.
+Test if all workflow is ok.
