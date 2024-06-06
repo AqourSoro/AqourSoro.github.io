@@ -19,11 +19,16 @@ jobs:
           tar -xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
           mv zola /usr/local/bin
 
-      - name: Install Sass
-        run: sudo apt-get install -y sassc
+      - name: Install Dart Sass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://github.com/sass/dart-sass/releases/download/1.32.13/dart-sass-1.32.13-linux-x64.tar.gz
+          tar -xzf dart-sass-1.32.13-linux-x64.tar.gz
+          sudo mv dart-sass/sass /usr/local/bin/sass
 
       - name: Compile Sass
-        run: sass themes/aqoursoro_pixel/static/sass/style.scss themes/aqoursoro_pixel/static/css/style.css
+        run: sass themes/aqoursoro_pixel/static/sass/style.sass themes/aqoursoro_pixel/static/css/style.css
 
       - name: Build Zola site
         run: |
