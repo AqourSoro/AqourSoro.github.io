@@ -27,6 +27,9 @@ jobs:
           tar -xzf dart-sass-1.32.13-linux-x64.tar.gz
           sudo mv dart-sass/sass /usr/local/bin/sass
 
+      - name: List files in the sass directory
+        run: ls -la themes/aqoursoro_pixel/static/sass/
+
       - name: Compile Sass
         run: sass themes/aqoursoro_pixel/static/sass/style.sass themes/aqoursoro_pixel/static/css/style.css
 
