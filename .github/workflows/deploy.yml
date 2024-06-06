@@ -31,7 +31,7 @@ jobs:
         run: cd as_blog
 
       - name: List files in the sass directory
-        run: ls -la themes/aqoursoro_pixel/static/sass/
+        run: ls 
 
       - name: Show contents of style.sass
         run: cat themes/aqoursoro_pixel/static/sass/style.sass
