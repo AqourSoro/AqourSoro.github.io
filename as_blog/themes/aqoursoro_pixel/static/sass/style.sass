@@ -1,13 +1,36 @@
+$avatar-size: 100px
+
 @font-face
-  font-family: 'Press Start 2P'
-  src: url('{{ get_url(path="fonts/PressStart2P-Regular.ttf") }}') format('truetype')
+    font-family: 'Minecraft'
+    src: url('../fonts/minecraft_font.ttf') format('truetype')
 
 body
-  font-family: 'Press Start 2P', sans-serif
-  background-color: #f4f4f4
-  color: #333
-  margin: 0
-  padding: 0
+    font-family: 'Minecraft', sans-serif
+    background-color: #f0f0f0
+    color: #333
 
-h1
-  color: #2c3e50
+.header, .footer
+    background-color: #333
+    color: #fff
+    text-align: center
+    padding: 10px 0
+
+.container
+    width: 80%
+    margin: 0 auto
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Minecraft', sans-serif
+
+a
+    color: #0066cc
+    text-decoration: none
+
+a:hover
+    text-decoration: underline
+
+.avatar
+    width: $avatar-size
+    height: $avatar-size
+    border-radius: 50%
+    border: 2px solid #333
