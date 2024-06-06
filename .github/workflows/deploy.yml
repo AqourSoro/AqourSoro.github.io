@@ -27,26 +27,25 @@ jobs:
           tar -xzf dart-sass-1.32.13-linux-x64.tar.gz
           sudo mv dart-sass/sass /usr/local/bin/sass
 
-      - name: Change directory to as_blog
-        run: cd as_blog
-
       - name: List files in the sass directory
-        run: ls 
+        run: ls -la as_blog/themes/aqoursoro_pixel/static/sass/
 
       - name: Show contents of style.sass
-        run: cat themes/aqoursoro_pixel/static/sass/style.sass
+        run: cat as_blog/themes/aqoursoro_pixel/static/sass/style.sass
 
       - name: Compile Sass
-        run: sass themes/aqoursoro_pixel/static/sass/style.sass themes/aqoursoro_pixel/static/css/style.css
+        run: sass as_blog/themes/aqoursoro_pixel/static/sass/style.sass as_blog/themes/aqoursoro_pixel/static/css/style.css
 
       - name: Build Zola site
-        run: zola build
+        run: |
+          cd as_blog
+          zola build
 
       - name: Copy CNAME file
-        run: cp ../CNAME public/CNAME
+        run: cp CNAME as_blog/public/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public
+          publish_dir: as_blog/public
