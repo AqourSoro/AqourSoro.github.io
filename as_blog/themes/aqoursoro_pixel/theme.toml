@@ -1,0 +1,10 @@
+name = "Aqoursoro Pixel"
+description = "A custom theme designed in pixel style for personal usage"
+min_version = "0.18.0"
+
+demo =""
+
+[extra]
+
+[author]
+name = "AqourSoro"
