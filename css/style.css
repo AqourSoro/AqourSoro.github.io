@@ -1,11 +1,14 @@
 @font-face {
-  font-family: "Fusion Pixel";
+  font-family: "Fusion Pixel LATIN";
   src: url("../fonts/fusion-pixel-10px-monospaced-latin.ttf") format("truetype");
 }
 body {
-  font-family: "Fusion Pixel", sans-serif;
+  font-family: "Fusion Pixel LATIN", sans-serif;
   background-color: #f0f0f0;
   color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header, .footer {
@@ -18,10 +21,22 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  padding: 20px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.avatar {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 2px solid #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fusion Pixel", sans-serif;
+  font-family: "Fusion Pixel LATIN", sans-serif;
 }
 
 a {
@@ -33,11 +48,18 @@ a:hover {
   text-decoration: underline;
 }
 
-.avatar {
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  border: 2px solid #333;
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.logo {
+  width: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
