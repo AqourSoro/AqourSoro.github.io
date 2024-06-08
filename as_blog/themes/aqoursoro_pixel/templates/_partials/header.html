@@ -1,10 +1,11 @@
-<div class="container">
-    <h1>{{ config.title }}</h1>
-    <img src="{{ get_url(path="images/aqoursoro_pat.png") }}" alt="Avatar" class="avatar">
+<div class="header">
+    <a href="{{ config.base_url }}"><img src="{{ get_url(path="images/aqoursoro_pt.png") }}" alt="Logo" class="logo"></a>
     <nav>
         <ul>
             <li><a href="{{ config.base_url }}">Home</a></li>
-            <!-- Add more links as needed -->
+            <li><a href="{{ config.base_url }}/about">About</a></li>
+            <li><a href="{{ config.base_url }}/blog">Blog</a></li>
+            <li><a href="{{ config.base_url }}/contact">Contact</a></li>
         </ul>
     </nav>
 </div>

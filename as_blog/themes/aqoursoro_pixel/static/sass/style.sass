@@ -1,13 +1,16 @@
 $avatar-size: 400px  // 根据你的需要调整大小
 
 @font-face
-    font-family: 'Fusion Pixel'
-    src: url('../fonts/fusion-pixel-10px-monospaced-latin.ttf') format('truetype')
+    font-family: 'Fusion Pixel LATIN'
+    src:  url('../fonts/fusion-pixel-10px-monospaced-latin.ttf') format('truetype')
 
 body
-    font-family: 'Fusion Pixel', sans-serif
+    font-family: 'Fusion Pixel LATIN', sans-serif
     background-color: #f0f0f0
     color: #333
+    margin: 0
+    padding: 0
+    box-sizing: border-box
 
 .header, .footer
     background-color: #333
@@ -18,9 +21,19 @@ body
 .container
     width: 80%
     margin: 0 auto
+    padding: 20px
+
+.intro
+    text-align: center
+
+.avatar
+    width: $avatar-size
+    height: $avatar-size
+    border-radius: 50%
+    border: 2px solid #333
 
 h1, h2, h3, h4, h5, h6
-    font-family: 'Fusion Pixel', sans-serif
+    font-family: 'Fusion Pixel LATIN', sans-serif
 
 a
     color: #0066cc
@@ -29,8 +42,13 @@ a
 a:hover
     text-decoration: underline
 
-.avatar
-    width: $avatar-size
-    height: $avatar-size
-    border-radius: 50%
-    border: 2px solid #333
+nav ul
+    list-style: none
+    padding: 0
+
+nav ul li
+    display: inline
+    margin-right: 15px
+
+.logo
+    width: 50px

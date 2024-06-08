@@ -1,15 +1,25 @@
-{% extends "page.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    <header>
+        {% include "partials/header.html" %}
+    </header>
+    <main class="container">
+        <section class="intro">
+            <img src="{{ get_url(path="images/aqoursoro_pat.png") }}" alt="Avatar" class="avatar">
+            <h1>{{ config.title }}</h1>
+        </section>
+        <section class="content">
+            <h2>Welcome to My Pixel Art Blog</h2>
+            <p>This is a personal website where I share my pixel art and other creative works.</p>
+        </section>
+    </main>
+    <footer>
+        {% include "partials/footer.html" %}
+    </footer>
+</body>
+</html>
 
-{% block content %}
-<main class="container">
-    <h1>Welcome to My Pixel Art Blog</h1>
-    <div>
-        {% for page in section.pages %}
-            <article>
-                <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-                <p>{{ page.summary }}</p>
-            </article>
-        {% endfor %}
-    </div>
-</main>
-{% endblock content %}
