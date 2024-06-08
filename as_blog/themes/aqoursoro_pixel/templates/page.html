@@ -4,14 +4,15 @@
     {% include "_partials/head.html" %}
 </head>
 <body>
-    <header class="header">
+    <header>
         {% include "_partials/header.html" %}
     </header>
-    <div>
-        {% block content %}{% endblock content %}
-    </div>
-    <footer class="footer">
+    <main class="container">
+        {{ content }}
+    </main>
+    <footer>
         {% include "_partials/footer.html" %}
     </footer>
 </body>
 </html>
+

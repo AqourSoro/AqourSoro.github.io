@@ -1,15 +1,24 @@
-{% extends "page.html" %}
-
-{% block content %}
-<main class="container">
-    <h1>{{ section.title }}</h1>
-    <div>
-        {% for page in section.pages %}
-            <article>
-                <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-                <p>{{ page.summary }}</p>
-            </article>
-        {% endfor %}
-    </div>
-</main>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "_partials/head.html" %}
+</head>
+<body>
+    <header>
+        {% include "_partials/header.html" %}
+    </header>
+    <main class="container">
+        <h1>{{ section.title }}</h1>
+        <ul>
+            {% for page in section.pages %}
+                <li>
+                    <a href="{{ page.permalink }}">{{ page.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        {% include "_partials/footer.html" %}
+    </footer>
+</body>
+</html>
