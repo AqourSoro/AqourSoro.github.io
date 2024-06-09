@@ -1,4 +1,4 @@
-$avatar-size: 400px  // 根据你的需要调整大小
+$avatar-size: 300px  // 根据你的需要调整大小
 
 @font-face
     font-family: 'Fusion Pixel LATIN'
@@ -6,14 +6,16 @@ $avatar-size: 400px  // 根据你的需要调整大小
 
 body
     font-family: 'Fusion Pixel LATIN', sans-serif
-    background-color: #f0f0f0
-    color: #333
+    background-image: url('../images/background.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
     margin: 0
     padding: 0
     box-sizing: border-box
 
 .header, .footer
-    background-color: #333
+    background-color: rgba(51, 51, 51, 0.8)
     color: #fff
     text-align: center
     padding: 10px 0
@@ -22,6 +24,8 @@ body
     width: 80%
     margin: 0 auto
     padding: 20px
+    background-color: rgba(255, 255, 255, 0.8)
+    border-radius: 10px
 
 .intro
     text-align: center
@@ -52,3 +56,15 @@ nav ul li
 
 .logo
     width: 50px
+
+@media (max-width: 768px)
+    .container
+        width: 90%
+    .avatar
+        width: 100px
+        height: 100px
+    .logo
+        width: 30px
+    nav ul li
+        display: block
+        margin: 5px 0
