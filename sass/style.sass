@@ -1,3 +1,12 @@
+// 定义颜色变量
+$primary-color: #ff6666 // 背景中的粉红色
+$background-color: rgba(240, 240, 240, 0.8) // 浅灰色背景
+$text-color: #333333 // 深灰色文字
+$nav-background-color: rgba(0, 0, 0, 0.7) // 半透明灰色导航栏
+$nav-text-color: #ffffff // 导航栏文字颜色
+$footer-background-color: rgba(0, 0, 0, 0.7) // 半透明灰色页脚
+$footer-text-color: #ffffff // 页脚文字颜色
+
 $avatar-size: 300px  // 根据你的需要调整大小
 
 @font-face
@@ -15,8 +24,8 @@ body
     box-sizing: border-box
 
 .header, .footer
-    background-color: rgba(51, 51, 51, 0.8)
-    color: #fff
+    background-color: $nav-background-color
+    color: $nav-text-color
     text-align: center
     padding: 10px 0
 
@@ -25,7 +34,8 @@ body
     margin: 0 auto
     padding: 20px
     border-radius: 10px
-    color: #333 // 修改文字颜色以便在浅色背景上可读
+    background-color: $background-color
+    color: $text-color
 
 .intro
     text-align: center
@@ -34,13 +44,13 @@ body
     width: $avatar-size
     height: $avatar-size
     border-radius: 50%
-    border: 2px solid #333
+    border: 2px solid $text-color
 
 h1, h2, h3, h4, h5, h6
     font-family: 'Fusion Pixel LATIN', sans-serif
 
 a
-    color: #0066cc
+    color: $primary-color
     text-decoration: none
 
 a:hover
