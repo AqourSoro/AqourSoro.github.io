@@ -1,13 +1,13 @@
 // 定义颜色变量
 $primary-color: #ff6666 // 背景中的粉红色
 $background-color: rgba(240, 240, 240, 0.8) // 浅灰色背景
-$text-color: #333333 // 深灰色文字
+$text-color: #ffffff // 白色文字颜色
 $nav-background-color: rgba(0, 0, 0, 0.7) // 半透明灰色导航栏
-$nav-text-color: #ffffff // 导航栏文字颜色
-$footer-background-color: rgba(0, 0, 0, 0.7) // 半透明灰色页脚
-$footer-text-color: #ffffff // 页脚文字颜色
+$nav-text-color: $text-color // 导航栏文字颜色
+$footer-background-color: $nav-background-color // 确保页脚背景颜色一致
+$footer-text-color: $text-color // 确保页脚文字颜色一致
 
-$avatar-size: 300px  // 根据你的需要调整大小
+$avatar-size: 400px  // 根据你的需要调整大小
 
 @font-face
     font-family: 'Fusion Pixel LATIN'
@@ -22,20 +22,35 @@ body
     margin: 0
     padding: 0
     box-sizing: border-box
+    display: flex
+    flex-direction: row
+    height: 100vh
+
+.left-column
+    background-color: $nav-background-color
+    color: $text-color
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+
+.right-column
+    background-color: $background-color
+    color: #333
+    width: 50%
+    padding: 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
 
 .header, .footer
     background-color: $nav-background-color
-    color: $nav-text-color
+    color: $text-color
     text-align: center
     padding: 10px 0
-
-.container
-    width: 80%
-    margin: 0 auto
-    padding: 20px
-    border-radius: 10px
-    background-color: $background-color
-    color: $text-color
 
 .intro
     text-align: center
@@ -68,6 +83,9 @@ nav ul li
     width: 50px
 
 @media (max-width: 768px)
+    .left-column, .right-column
+        width: 100%
+        height: auto
     .container
         width: 90%
     .avatar
