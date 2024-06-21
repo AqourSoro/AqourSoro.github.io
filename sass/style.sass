@@ -7,7 +7,7 @@ $nav-text-color: $text-color // 导航栏文字颜色
 $footer-background-color: $nav-background-color // 确保页脚背景颜色一致
 $footer-text-color: $text-color // 确保页脚文字颜色一致
 
-$avatar-size: 400px  // 根据你的需要调整大小
+$avatar-size: 300px  // 根据你的需要调整大小
 
 @font-face
     font-family: 'Fusion Pixel LATIN'
@@ -87,11 +87,14 @@ nav ul li
     width: 50px
 
 @media (max-width: 768px)
+    body
+        flex-direction: column
     .left-column, .right-column
         width: 100%
         height: auto
     .container
         width: 90%
+        padding: 10px
     .avatar
         width: 100px
         height: 100px
