@@ -38,18 +38,7 @@ body {
   align-items: center;
 }
 
-.header {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  margin: 0;
-  border: none;
-  box-shadow: none;
-}
-
-.footer {
+.header, .footer {
   background-color: rgba(0, 0, 0, 0.7);
   color: #ffffff;
   text-align: center;
