@@ -6,6 +6,7 @@ $nav-text-color: #ffffff // 导航栏文字颜色
 $footer-text-color: $nav-text-color // 确保页脚文字颜色一致
 
 $avatar-size: 300px  // 根据你的需要调整大小
+$logo-size: 50px // 根据需要调整logo大小
 
 @font-face
     font-family: 'Fusion Pixel LATIN'
@@ -41,8 +42,8 @@ body
     padding: 20px
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
+    justify-content: flex-start
+    align-items: flex-end
 
 .header, .footer
     background-color: transparent // 移除颜色，使其透明
@@ -53,6 +54,14 @@ body
     margin: 0
     border: none
     box-shadow: none
+
+.nav-right
+    width: 100%
+    text-align: right
+    margin-bottom: 20px
+    display: flex
+    justify-content: flex-end
+    align-items: center
 
 .intro
     text-align: center
@@ -83,7 +92,8 @@ nav ul li
     margin-right: 15px
 
 .logo
-    width: 50px
+    width: $logo-size
+    height: $logo-size
 
 @media (max-width: 768px)
     body
