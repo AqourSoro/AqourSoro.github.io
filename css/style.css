@@ -34,8 +34,8 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .header, .footer {
@@ -47,6 +47,15 @@ body {
   margin: 0;
   border: none;
   box-shadow: none;
+}
+
+.nav-right {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .intro {
@@ -86,6 +95,7 @@ nav ul li {
 
 .logo {
   width: 50px;
+  height: 50px;
 }
 
 @media (max-width: 768px) {
