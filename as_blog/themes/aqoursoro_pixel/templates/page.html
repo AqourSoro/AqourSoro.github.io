@@ -8,11 +8,10 @@
         {% include "_partials/header.html" %}
     </header>
     <main class="container">
-        {{ content }}
+        {{ page.content | safe }}
     </main>
     <footer>
         {% include "_partials/footer.html" %}
     </footer>
 </body>
 </html>
-
