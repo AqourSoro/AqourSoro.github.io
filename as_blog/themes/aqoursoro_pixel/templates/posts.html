@@ -1,0 +1,15 @@
+<h2>{{ section.title }}</h2>
+<p>Number of pages - {{ section.pages | length }}</p>
+<ul>
+    {% for page in section.pages %}
+        <li class="post-item">
+            <p>Page title - {{ page.title }}</p>
+            <p>Page permalink - {{ page.permalink }}</p>
+            <p>Page summary - {{ page.summary }}</p>
+            <a href="{{ page.permalink }}" class="post-title">{{ page.title }}</a>
+            <p class="post-summary">{{ page.summary }}</p>
+        </li>
+    {% else %}
+        <li>No blog posts found</li>
+    {% endfor %}
+</ul>

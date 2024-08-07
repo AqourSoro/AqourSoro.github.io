@@ -1,0 +1,116 @@
+// 定义颜色变量
+$primary-color: #ff6666 // 背景中的粉红色
+$background-color: rgba(240, 240, 240, 0.8) // 浅灰色背景
+$text-color: #ffffff // 白色文字颜色
+$nav-text-color: #ffffff // 导航栏文字颜色
+$footer-text-color: $nav-text-color // 确保页脚文字颜色一致
+
+$avatar-size: 300px  // 根据你的需要调整大小
+
+@font-face
+    font-family: 'Fusion Pixel LATIN'
+    src:  url('../fonts/fusion-pixel-10px-monospaced-latin.ttf') format('truetype')
+
+body
+    font-family: 'Fusion Pixel LATIN', sans-serif
+    background-image: url('../images/background_2.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    display: flex
+    flex-direction: row
+    height: 100vh
+
+.left-column
+    background-color: rgba(121, 73, 109, 0.7)
+    color: $text-color
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+
+.right-column
+    background-color: $background-color
+    color: #333
+    width: 50%
+    padding: 20px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-end
+
+.header, .footer
+    background-color: transparent // 移除颜色，使其透明
+    color: $nav-text-color
+    text-align: center
+    padding: 10px 0
+    width: 100%
+    margin: 0
+    border: none
+    box-shadow: none
+
+.nav-right
+    width: 100%
+    text-align: right
+    margin-bottom: 20px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+.intro
+    text-align: center
+
+.avatar
+    width: $avatar-size
+    height: $avatar-size
+    border-radius: 50%
+    border: none // 移除边框
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Fusion Pixel LATIN', sans-serif
+
+a
+    color: $primary-color
+    text-decoration: none
+
+a:hover
+    text-decoration: underline
+
+nav ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+nav ul li
+    display: inline
+    margin-right: 15px
+
+.logo
+    width: auto
+    height: auto
+    max-width: 100px // 设置最大宽度或高度以适应页面布局
+    max-height: 100px // 你可以根据需要调整这些值
+
+@media (max-width: 768px)
+    body
+        flex-direction: column
+    .left-column, .right-column
+        width: 100%
+        height: auto
+    .container
+        width: 90%
+        padding: 10px
+    .avatar
+        width: 100px
+        height: 100px
+    .logo
+        max-width: 50px // 在小屏幕上适当缩小
+        max-height: 50px
+    nav ul li
+        display: block
+        margin: 5px 0
