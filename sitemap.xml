@@ -4,7 +4,10 @@
         <loc>https://aqoursoro.com/</loc>
     </url>
     <url>
+        <loc>https://aqoursoro.com/posts/</loc>
+    </url>
+    <url>
         <loc>https://aqoursoro.com/posts/example-first-post/</loc>
-        <lastmod>2017-09-25</lastmod>
+        <lastmod>2024-07-31</lastmod>
     </url>
 </urlset>
