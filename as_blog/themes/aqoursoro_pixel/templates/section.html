@@ -9,13 +9,9 @@
     </header>
     <main class="container">
         <h1>{{ section.title }}</h1>
-        <p>Debug: Number of pages - {{ section.pages | length }}</p>
         <ul>
             {% for page in section.pages %}
                 <li class="post-item">
-                    <p>Debug: Page title - {{ page.title }}</p>
-                    <p>Debug: Page permalink - {{ page.permalink }}</p>
-                    <p>Debug: Page summary - {{ page.summary }}</p>
                     <a href="{{ page.permalink }}" class="post-title">{{ page.title }}</a>
                     <p class="post-summary">{{ page.summary }}</p>
                 </li>
