@@ -22,10 +22,10 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <li><a href="#" onclick="loadContent('home')">Home</a></li>
-                    <li><a href="#" onclick="loadContent('about')">About</a></li>
-                    <li><a href="#" onclick="loadContent('posts')">Blog</a></li>
-                    <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
+                    <li><a href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
+                    <li><a href="{{ config.base_url }}/about" onclick="loadContent('about', '{{ config.base_url }}/about'); return false;">About</a></li>
+                    <li><a href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
+                    <li><a href="{{ config.base_url }}/contact" onclick="loadContent('contact', '{{ config.base_url }}/contact'); return false;">Contact</a></li>
                 </ul>
             </nav>
         </div>
