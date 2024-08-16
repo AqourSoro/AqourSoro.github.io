@@ -1,15 +1,49 @@
-<h2>{{ section.title }}</h2>
-<p>Number of pages - {{ section.pages | length }}</p>
-<ul>
-    {% for page in section.pages %}
-        <li class="post-item">
-            <p>Page title - {{ page.title }}</p>
-            <p>Page permalink - {{ page.permalink }}</p>
-            <p>Page summary - {{ page.summary }}</p>
-            <a href="{{ page.permalink }}" class="post-title">{{ page.title }}</a>
-            <p class="post-summary">{{ page.summary }}</p>
-        </li>
-    {% else %}
-        <li>No blog posts found</li>
-    {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "_partials/head.html" %}
+</head>
+<body>
+    <div class="left-column">
+        <header class="header">
+            {% include "_partials/header.html" %}
+        </header>
+        <section class="intro">
+            <img src="{{ get_url(path="images/aqoursoro_pat.png") }}" alt="Avatar" class="avatar">
+        </section>
+        <section class="content">
+            <p>Be water my friend.</p>
+        </section>
+        <footer class="footer">
+            {% include "_partials/footer.html" %}
+        </footer>
+    </div>
+    <div class="right-column">
+        <div class="nav-right">
+            <nav>
+                <ul>
+                    <li><a href="{{ config.base_url }}">Home</a></li>
+                    <li><a href="{{ config.base_url }}/about">About</a></li>
+                    <li><a href="{{ config.base_url }}/posts">Blog</a></li>
+                    <li><a href="{{ config.base_url }}/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="container">
+            <section class="content">
+                <h2>Blog Posts</h2>
+                <ul>
+                    {% for page in section.pages %}
+                        <li class="post-item">
+                            <a href="{{ page.permalink }}" class="post-title">{{ page.title }}</a>
+                            <p class="post-summary">{{ page.summary }}</p>
+                        </li>
+                    {% else %}
+                        <li>No blog posts found</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
