@@ -1,6 +1,6 @@
 {
-    "welcome-text": "欢迎来到我的博客!",
-    "home-content": "主页内容在这里。",
+    "homeTitle": "欢迎来到我的博客!",
+    "homeContent": "主页内容在这里。",
     "nav": {
         "home": "主页",
         "about": "关于",

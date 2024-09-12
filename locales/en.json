@@ -1,6 +1,6 @@
 {
-    "welcome-text": "Welcome to my blog!",
-    "home-content": "This is my personal blog for sharing anything I'd like to share here, feel free to look for anything you want!",
+    "homeTitle": "Welcome to my blog!",
+    "homeContent": "This is my personal blog for sharing anything I'd like to share here, feel free to look for anything you want!",
     "nav": {
         "home": "Home",
         "about": "About",
