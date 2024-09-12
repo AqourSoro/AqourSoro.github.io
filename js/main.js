@@ -38,7 +38,7 @@ function loadContent(section, url) {
 let currentLanguage = 'cn'; // 默认语言是中文
 
 function loadTranslations(language) {
-    const langFile = `/static/locales/${language}.json`; // JSON 文件路径
+    const langFile = `/locales/${language}.json`; // JSON 文件路径
 
     fetch(langFile)
         .then(response => {
