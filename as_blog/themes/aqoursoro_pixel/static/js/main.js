@@ -35,29 +35,25 @@ function loadContent(section, url) {
     }
 }
 
-let currentLanguage = '中文'; // 默认语言
+let currentLanguage = 'cn'; // 默认语言是中文
+
+function loadTranslations(language) {
+    fetch(`/assets/lang_${language}.json`) // 动态加载语言 JSON 文件
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector('#welcome-text').innerText = data.homeTitle;
+            document.querySelector('#home-content').innerText = data.homeContent;
+        })
+        .catch(error => console.error('Error loading translations:', error));
+}
 
 function toggleLanguage() {
-    const languageBtn = document.getElementById('language-btn');
-    const elementsToTranslate = document.querySelectorAll('.translatable');
-
-    if (currentLanguage === '中文') {
-        // 切换为英文
-        languageBtn.textContent = 'English';
-        currentLanguage = 'English';
-
-        // 替换页面的所有文本为英文
-        elementsToTranslate.forEach(el => {
-            el.textContent = el.getAttribute('data-en');
-        });
-    } else {
-        // 切换为中文
-        languageBtn.textContent = '中文';
-        currentLanguage = '中文';
-
-        // 替换页面的所有文本为中文
-        elementsToTranslate.forEach(el => {
-            el.textContent = el.getAttribute('data-cn');
-        });
-    }
+    currentLanguage = currentLanguage === 'en' ? 'cn' : 'en';
+    document.getElementById('language-btn').innerText = currentLanguage === 'en' ? 'English' : '中文';
+    loadTranslations(currentLanguage);
 }
+
+// 页面加载时加载默认语言
+document.addEventListener('DOMContentLoaded', () => {
+    loadTranslations(currentLanguage);
+});
