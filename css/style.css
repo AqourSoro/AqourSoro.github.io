@@ -37,12 +37,6 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.right-column h2 {
-  text-align: center;
-}
-.right-column p {
-  text-align: justify;
-}
 
 .header, .footer {
   background-color: transparent;
@@ -73,6 +67,13 @@ body {
   height: 300px;
   border-radius: 50%;
   border: none;
+}
+
+.content h2 {
+  text-align: center;
+}
+.content p {
+  text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
