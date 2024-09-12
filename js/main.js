@@ -35,7 +35,7 @@ function loadContent(section, url) {
     }
 }
 
-let currentLanguage = 'cn'; // 默认语言是中文
+let currentLanguage = 'en'; // 默认语言是English
 
 function loadTranslations(language) {
     const langFile = `/locales/${language}.json`; // JSON 文件路径

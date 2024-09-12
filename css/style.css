@@ -68,7 +68,8 @@ body {
   align-items: flex-start;
 }
 
-.nav-right ul li a, #language-btn {
+.nav-right ul li a,
+.nav-right ul li button {
   text-decoration: none;
   padding: 10px 20px;
   color: #000000;
@@ -79,7 +80,8 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav-right ul li a:hover, #language-btn:hover {
+.nav-right ul li a:hover,
+.nav-right ul li button:hover {
   background-color: #ff6666;
   color: #ffffff;
 }
