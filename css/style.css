@@ -41,6 +41,13 @@ body {
   text-align: center;
 }
 
+.translatable h2 {
+  text-align: center;
+}
+.translatable p {
+  text-align: justify;
+}
+
 .header, .footer {
   background-color: transparent;
   color: #ffffff;
