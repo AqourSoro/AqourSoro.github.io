@@ -18,23 +18,28 @@
             {% include "_partials/footer.html" %}
         </footer>
     </div>
+    
+    <!-- 右侧内容区域 -->
     <div class="right-column">
         <div class="nav-right">
             <nav>
                 <ul>
+                    <!-- 使用JavaScript动态切换内容 -->
                     <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
                     <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
-                    <li><button id="language-btn" onclick="toggleLanguage()">English</button></li>
+                    <li><a id="language-btn" onclick="toggleLanguage(); return false;">English</a></li>
                 </ul>
             </nav>
         </div>
+        
         <main class="container">
             <section class="content">
                 <h2>Blog Posts</h2>
                 <ul>
+                    <!-- 使用Zola生成文章列表 -->
                     {% for page in section.pages %}
                         <li class="post-item">
-                            <a href="{{ page.permalink }}" class="post-title">{{ page.title }}</a>
+                            <a href="{{ page.permalink }}" class="post-title" onclick="loadContent('post', '{{ page.permalink }}'); return false;">{{ page.title }}</a>
                             <p class="post-summary">{{ page.summary }}</p>
                         </li>
                     {% else %}
@@ -44,5 +49,7 @@
             </section>
         </main>
     </div>
+    
+    <script src="{{ get_url(path="js/main.js") }}"></script>
 </body>
 </html>
