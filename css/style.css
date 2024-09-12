@@ -61,6 +61,22 @@ body {
   align-items: flex-start;
 }
 
+.nav-right ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #000000;
+  background-color: rgba(255, 102, 102, 0);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-right ul li a:hover {
+  background-color: #ff6666;
+  color: #ffffff;
+}
+
 .intro {
   text-align: center;
 }
@@ -94,22 +110,6 @@ nav ul {
 nav ul li {
   display: inline;
   margin-right: 15px;
-}
-
-.nav-right ul li a {
-  text-decoration: none;
-  padding: 10px 20px;
-  color: #000000;
-  background-color: rgba(255, 102, 102, 0);
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.nav-right ul li a:hover {
-  background-color: #ff6666;
-  color: #ffffff;
 }
 
 .logo {
