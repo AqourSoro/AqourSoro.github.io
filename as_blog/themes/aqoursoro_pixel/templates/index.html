@@ -22,8 +22,8 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <li><a href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
-                    <li><a href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
+                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
+                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
                     <li><button id="language-btn" onclick="toggleLanguage()">中文</button></li>
                 </ul>
             </nav>

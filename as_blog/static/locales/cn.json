@@ -1,10 +1,7 @@
 {
     "homeTitle": "欢迎来到我的博客!",
     "homeContent": "主页内容在这里。",
-    "nav": {
-        "home": "主页",
-        "about": "关于",
-        "blog": "博客",
-        "contact": "联系"
-    }
+    "home_btn": "主页",
+    "blog_btn": "博客"
+
 }
