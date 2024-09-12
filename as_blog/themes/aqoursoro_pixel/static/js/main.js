@@ -35,11 +35,29 @@ function loadContent(section, url) {
     }
 }
 
-function changeLanguage(lang) {
-    // 可以通过修改URL或者通过后端获取不同的语言页面
-    if (lang === 'en') {
-        window.location.href = '/en'; // 假设英文页面在 `/en`
-    } else if (lang === 'cn') {
-        window.location.href = '/cn'; // 假设中文页面在 `/cn`
+let currentLanguage = '中文'; // 默认语言
+
+function toggleLanguage() {
+    const languageBtn = document.getElementById('language-btn');
+    const elementsToTranslate = document.querySelectorAll('.translatable');
+
+    if (currentLanguage === '中文') {
+        // 切换为英文
+        languageBtn.textContent = 'English';
+        currentLanguage = 'English';
+
+        // 替换页面的所有文本为英文
+        elementsToTranslate.forEach(el => {
+            el.textContent = el.getAttribute('data-en');
+        });
+    } else {
+        // 切换为中文
+        languageBtn.textContent = '中文';
+        currentLanguage = '中文';
+
+        // 替换页面的所有文本为中文
+        elementsToTranslate.forEach(el => {
+            el.textContent = el.getAttribute('data-cn');
+        });
     }
 }
