@@ -38,8 +38,8 @@ function loadContent(section, url) {
 let currentLanguage = 'cn'; // 默认语言是中文
 
 function loadTranslations(language) {
-    const langFile = `/locales/${language}.json`; // JSON 文件路径
-    
+    const langFile = `/static/locales/${language}.json`; // JSON 文件路径
+
     fetch(langFile)
         .then(response => {
             if (!response.ok) {
@@ -48,15 +48,20 @@ function loadTranslations(language) {
             return response.json();
         })
         .then(data => {
+            // 更新页面主要内容
             document.querySelector('#welcome-text').innerText = data.homeTitle;
             document.querySelector('#home-content').innerText = data.homeContent;
+
+            // 更新导航栏按钮的文字
+            document.getElementById('home-btn').innerText = data.homeTitle;
+            document.getElementById('blog-btn').innerText = data.blogTitle;
+            document.getElementById('language-btn').innerText = data.languageButton;
         })
         .catch(error => console.error('Error loading translations:', error));
 }
 
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'en' ? 'cn' : 'en';
-    document.getElementById('language-btn').innerText = currentLanguage === 'en' ? 'English' : '中文';
     loadTranslations(currentLanguage);
 }
 
