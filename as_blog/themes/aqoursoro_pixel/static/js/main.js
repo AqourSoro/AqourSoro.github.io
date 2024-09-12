@@ -38,7 +38,7 @@ function loadContent(section, url) {
 let currentLanguage = 'cn'; // 默认语言是中文
 
 function loadTranslations(language) {
-    fetch(`/assets/lang_${language}.json`) // 动态加载语言 JSON 文件
+    fetch(`/assets/${language}.json`) // 动态加载语言 JSON 文件
         .then(response => response.json())
         .then(data => {
             document.querySelector('#welcome-text').innerText = data.homeTitle;
