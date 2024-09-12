@@ -78,6 +78,8 @@ body {
   font-weight: bold;
   transition: background-color 0.3s ease;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  font-family: "Fusion Pixel LATIN", sans-serif;
 }
 
 .nav-right ul li a:hover,
