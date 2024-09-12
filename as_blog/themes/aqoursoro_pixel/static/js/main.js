@@ -53,8 +53,8 @@ function loadTranslations(language) {
             document.querySelector('#home-content').innerText = data.homeContent;
 
             // 更新导航栏按钮的文字
-            document.getElementById('home-btn').innerText = data.homeTitle;
-            document.getElementById('blog-btn').innerText = data.blogTitle;
+            document.getElementById('home-btn').innerText = data.homeBtn;
+            document.getElementById('blog-btn').innerText = data.blogBtn;
             document.getElementById('language-btn').innerText = data.languageButton;
         })
         .catch(error => console.error('Error loading translations:', error));
