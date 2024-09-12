@@ -69,10 +69,10 @@ body {
   border: none;
 }
 
-.content h2 {
+.main-content h2 {
   text-align: center;
 }
-.content p {
+.main-content p {
   text-align: justify;
 }
 
