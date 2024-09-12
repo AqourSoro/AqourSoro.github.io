@@ -38,8 +38,15 @@ function loadContent(section, url) {
 let currentLanguage = 'cn'; // 默认语言是中文
 
 function loadTranslations(language) {
-    fetch(`/assets/${language}.json`) // 动态加载语言 JSON 文件
-        .then(response => response.json())
+    const langFile = `/locales/${language}.json`; // JSON 文件路径
+    
+    fetch(langFile)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             document.querySelector('#welcome-text').innerText = data.homeTitle;
             document.querySelector('#home-content').innerText = data.homeContent;
