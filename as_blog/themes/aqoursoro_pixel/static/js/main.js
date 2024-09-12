@@ -34,3 +34,12 @@ function loadContent(section, url) {
         history.pushState(null, null, url);
     }
 }
+
+function changeLanguage(lang) {
+    // 可以通过修改URL或者通过后端获取不同的语言页面
+    if (lang === 'en') {
+        window.location.href = '/en'; // 假设英文页面在 `/en`
+    } else if (lang === 'cn') {
+        window.location.href = '/cn'; // 假设中文页面在 `/cn`
+    }
+}
