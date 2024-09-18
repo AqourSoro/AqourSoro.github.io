@@ -43,7 +43,7 @@
                                 </h3>
                                 <p class="post-meta">
                                     <time datetime="{{ page.date }}">{{ page.date | date(format="02 JAN 2006") }}</time>
-                                    <span class="read-time">{{ page.word_count | divided_by(200) | ceil }} min read</span>
+                                    <span class="read-time">{{ (page.word_count / 200) | round }} min read</span>
                                 </p>
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
