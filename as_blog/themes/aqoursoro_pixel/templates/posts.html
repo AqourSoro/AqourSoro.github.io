@@ -47,11 +47,15 @@
                                 </p>
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
-                            <ul class="post-tags">
-                                {% for tag in page.tags %}
-                                    <li>{{ tag }}</li>
-                                {% endfor %}
-                            </ul>
+
+                            <!-- 检查是否存在 tags -->
+                            {% if page.tags %}
+                                <ul class="post-tags">
+                                    {% for tag in page.tags %}
+                                        <li>{{ tag }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                         </article>
                     {% else %}
                         <p>No blog posts found</p>
