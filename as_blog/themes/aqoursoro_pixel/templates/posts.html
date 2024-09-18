@@ -24,7 +24,6 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <!-- 使用JavaScript动态切换内容 -->
                     <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
                     <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
                     <li><a id="language-btn" onclick="toggleLanguage(); return false;">English</a></li>
@@ -35,17 +34,29 @@
         <main class="container">
             <section class="content">
                 <h2>Blog Posts</h2>
-                <ul>
-                    <!-- 使用Zola生成文章列表 -->
+                <div class="post-list">
                     {% for page in section.pages %}
-                        <li class="post-item">
-                            <a href="{{ page.permalink }}" class="post-title" onclick="loadContent('post', '{{ page.permalink }}'); return false;">{{ page.title }}</a>
+                        <article class="post-item">
+                            <header>
+                                <h3 class="post-title">
+                                    <a href="{{ page.permalink }}" onclick="loadContent('post', '{{ page.permalink }}'); return false;">{{ page.title }}</a>
+                                </h3>
+                                <p class="post-meta">
+                                    <time datetime="{{ page.date }}">{{ page.date | date(format="02 JAN 2006") }}</time>
+                                    <span class="read-time">{{ page.word_count | divided_by(200) | ceil }} min read</span>
+                                </p>
+                            </header>
                             <p class="post-summary">{{ page.summary }}</p>
-                        </li>
+                            <ul class="post-tags">
+                                {% for tag in page.tags %}
+                                    <li>{{ tag }}</li>
+                                {% endfor %}
+                            </ul>
+                        </article>
                     {% else %}
-                        <li>No blog posts found</li>
+                        <p>No blog posts found</p>
                     {% endfor %}
-                </ul>
+                </div>
             </section>
         </main>
     </div>
