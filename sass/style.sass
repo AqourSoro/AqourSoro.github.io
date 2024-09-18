@@ -48,11 +48,11 @@ body
     flex-direction: column
     justify-content: flex-start
     align-items: stretch
-    h2
+    h1, h2, h3, h4, h5, h6
         text-align: center
 
 .translatable
-    h2
+    h1, h2, h3, h4, h5, h6
         text-align: center
     p
         text-align: justify
@@ -97,32 +97,6 @@ body
 .intro
     text-align: center
 
-.avatar
-    width: $avatar-size
-    height: $avatar-size
-    border-radius: 50%
-    border: none // 移除边框
-
-h1, h2, h3, h4, h5, h6
-    font-family: 'Fusion Pixel LATIN', sans-serif
-
-a
-    color: $primary-color
-    cursor: pointer // 鼠标悬停时变成指针，显示可点击
-    text-decoration: none
-
-a:hover
-    text-decoration: underline
-
-nav ul
-    list-style: none
-    padding: 0
-    margin: 0
-
-nav ul li
-    display: inline
-    margin-right: 15px
-
 //posts layout
 .post-list
     margin: 20px 0
@@ -165,8 +139,31 @@ nav ul li
     font-size: 12px
     color: #666
 
+.avatar
+    width: $avatar-size
+    height: $avatar-size
+    border-radius: 50%
+    border: none // 移除边框
 
+h1, h2, h3, h4, h5, h6
+    font-family: 'Fusion Pixel LATIN', sans-serif
 
+a
+    color: $primary-color
+    cursor: pointer // 鼠标悬停时变成指针，显示可点击
+    text-decoration: none
+
+a:hover
+    text-decoration: underline
+
+nav ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+nav ul li
+    display: inline
+    margin-right: 15px
 
 .logo
     width: auto
