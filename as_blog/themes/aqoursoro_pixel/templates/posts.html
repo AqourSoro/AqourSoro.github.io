@@ -19,7 +19,6 @@
         </footer>
     </div>
     
-    <!-- 右侧内容区域 -->
     <div class="right-column">
         <div class="nav-right">
             <nav>
@@ -43,18 +42,16 @@
                                 </h3>
                                 <p class="post-meta">
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
+                                    <span class="post-tags">
+                                        {% if page.tags %}
+                                            {% for tag in page.tags %}
+                                                <span class="tag">{{ tag }}</span>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </span>
                                 </p>
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
-
-                            <!-- 检查是否存在 tags -->
-                            {% if page.tags %}
-                                <ul class="post-tags">
-                                    {% for tag in page.tags %}
-                                        <li>{{ tag }}</li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
                         </article>
                     {% else %}
                         <p>No blog posts found</p>
