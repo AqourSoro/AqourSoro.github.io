@@ -40,8 +40,7 @@
                                 <h3 class="post-title">
                                     <a href="{{ page.permalink }}" onclick="loadContent('post', '{{ page.permalink }}'); return false;">{{ page.title }}</a>
                                 </h3>
-                                <p>
-                                    <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
+                                <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
                                     <span class="post-tags">
                                         {% if page.tags %}
                                             {% for tag in page.tags %}
@@ -49,7 +48,6 @@
                                             {% endfor %}
                                         {% endif %}
                                     </span>
-                                </p>
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
                         </article>
