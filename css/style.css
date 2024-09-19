@@ -112,6 +112,7 @@ body {
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .read-time {
@@ -129,7 +130,6 @@ body {
   padding: 0;
   display: flex;
   gap: 10px;
-  justify-content: flex-end;
 }
 
 .post-tags li {
