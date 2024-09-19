@@ -37,7 +37,8 @@ body {
   justify-content: flex-start;
   align-items: stretch;
 }
-.right-column h1, .right-column h2, .right-column h3, .right-column h4, .right-column h5, .right-column h6 {
+
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
@@ -116,7 +117,6 @@ body {
 .post-date {
   color: #00cc00;
   font-size: 12px;
-  justify-content: right;
   text-align: right;
 }
 
@@ -131,11 +131,6 @@ body {
   padding: 5px 10px;
   font-size: 12px;
   color: #666;
-}
-
-.post-summary {
-  font-size: 16px;
-  margin-bottom: 20px;
 }
 
 .avatar {

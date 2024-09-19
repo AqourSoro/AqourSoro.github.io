@@ -48,8 +48,9 @@ body
     flex-direction: column
     justify-content: flex-start
     align-items: stretch
-    h1, h2, h3, h4, h5, h6
-        text-align: center
+
+h1, h2, h3, h4, h5, h6
+    text-align: center
 
 .translatable
     h1, h2, h3, h4, h5, h6
@@ -59,7 +60,7 @@ body
 
 // 导航栏样式
 .header, .footer
-    background-color: transparent // 移除颜色，使其透明
+    background-color: transparent
     color: $nav-text-color
     text-align: center
     padding: 10px 0
@@ -80,23 +81,23 @@ body
 .nav-right ul li a
     text-decoration: none
     padding: 10px 20px
-    color: $button-text-color // 导航栏文字颜色
-    background-color: $button-background-color // 按钮背景颜色
-    border-radius: 8px // 按钮圆角
+    color: $button-text-color
+    background-color: $button-background-color
+    border-radius: 8px
     font-weight: bold
-    transition: background-color 0.3s ease // 背景色过渡效果
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1) // 按钮阴影效果
-    border: none // 移除按钮边框
+    transition: background-color 0.3s ease
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1)
+    border: none
     font-family: 'Fusion Pixel LATIN', sans-serif
 
 .nav-right ul li a:hover
-    background-color: $button-hover-color // 悬停时的背景颜色
-    color: $button-hover-text-color // 悬停时文字颜色
+    background-color: $button-hover-color
+    color: $button-hover-text-color
 
 .intro
     text-align: center
 
-// posts layout
+// 帖子样式
 .post-list
     margin: 20px 0
 
@@ -114,13 +115,12 @@ body
     font-size: 14px
     margin-bottom: 5px
     display: flex
-    justify-content: space-between // 确保日期和 tag 显示在两端
+    justify-content: space-between // 确保日期和标签两端对齐
 
 .post-date
     color: #00cc00
     font-size: 12px
-    justify-content: right
-    text-align: right // 日期靠右对齐
+    text-align: right // 强制日期右对齐
 
 .post-tags
     display: flex
@@ -133,22 +133,18 @@ body
     font-size: 12px
     color: #666
 
-.post-summary
-    font-size: 16px
-    margin-bottom: 20px
-
 .avatar
     width: $avatar-size
     height: $avatar-size
     border-radius: 50%
-    border: none // 移除边框
+    border: none
 
 h1, h2, h3, h4, h5, h6
     font-family: 'Fusion Pixel LATIN', sans-serif
 
 a
     color: $primary-color
-    cursor: pointer // 鼠标悬停时变成指针，显示可点击
+    cursor: pointer
     text-decoration: none
 
 a:hover
@@ -166,8 +162,8 @@ nav ul li
 .logo
     width: auto
     height: auto
-    max-width: 100px // 设置最大宽度或高度以适应页面布局
-    max-height: 100px // 你可以根据需要调整这些值
+    max-width: 100px
+    max-height: 100px
 
 @media (max-width: 768px)
     body
@@ -182,7 +178,7 @@ nav ul li
         width: 100px
         height: 100px
     .logo
-        max-width: 50px // 在小屏幕上适当缩小
+        max-width: 50px
         max-height: 50px
     nav ul li
         display: block
