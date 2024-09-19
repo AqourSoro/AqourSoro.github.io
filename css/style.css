@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 .post-date {
   text-align: right;
   margin-left: auto;
+  color: #92d45c;
 }
 
 .post-tags {
