@@ -1,7 +1,5 @@
 # The URL the site will be built for
 base_url = "https://aqoursoro.com"
-title = "AqourSoro"
-description = "This is AqourSoro's personal site!"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -16,10 +14,21 @@ taxonomies = [
 ]
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 
+# 多语言配置
+default_language = "en"
+
+[languages]
+[languages.en]
+title = "AqourSoro"
+description = "This is AqourSoro's personal site!"
+weight = 1
+
+[languages.cn]
+title = "AqourSoro的个人网站"
+description = "这是AqourSoro的个人网站！"
+weight = 2
 
 [extra]
 # Put all your custom variables here
