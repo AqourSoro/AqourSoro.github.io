@@ -45,6 +45,7 @@
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
                                     <span class="post-tags">
                                         {% if page.tags %}
+                                            <p>Tags: {{ page.tags | join(", ") }}</p>
                                             {% for tag in page.tags %}
                                                 <span class="tag">{{ tag }}</span>
                                             {% endfor %}
