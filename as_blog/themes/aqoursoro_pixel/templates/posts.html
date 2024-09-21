@@ -45,11 +45,11 @@
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
                                     </span>
                                 </p>
-                                {% if page.tags %}
-                                    <p>Tags Exist</p>
+                                {% for tag in page.taxonomies.tags %}
+                                <span class="tag">{{ tag }}</span>
                                 {% else %}
-                                    <p>No Tags</p>
-                                {% endif %}
+                                <p>No Tags Available</p>
+                                {% endfor %}
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
                         </article>
