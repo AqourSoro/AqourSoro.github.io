@@ -4,9 +4,6 @@
         <loc>https://aqoursoro.com/</loc>
     </url>
     <url>
-        <loc>https://aqoursoro.com/categories/</loc>
-    </url>
-    <url>
         <loc>https://aqoursoro.com/posts/</loc>
     </url>
     <url>
@@ -15,5 +12,8 @@
     </url>
     <url>
         <loc>https://aqoursoro.com/tags/</loc>
+    </url>
+    <url>
+        <loc>https://aqoursoro.com/tags/example/</loc>
     </url>
 </urlset>
