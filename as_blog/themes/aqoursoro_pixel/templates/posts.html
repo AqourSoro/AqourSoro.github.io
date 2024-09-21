@@ -44,18 +44,14 @@
                                 <p class="post-meta">
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
                                     {% if page.tags %}
-                                        <p>Tags: 
-                                            {% for tag in page.tags %}
-                                                <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
-                                            {% endfor %}
-                                        </p>
-                                    {% endif %}
-                                    <span class="post-tags">
-                                        {% if page.tags %}
+                                        <p>Tags:
                                             {% for tag in page.tags %}
                                                 <span class="tag">{{ tag }}</span>
                                             {% endfor %}
-                                        {% endif %}
+                                        </p>
+                                    {% else %}
+                                        <p>No Tags</p>
+                                    {% endif %}
                                     </span>
                                 </p>
                             </header>
