@@ -4,10 +4,16 @@
         <loc>https://aqoursoro.com/</loc>
     </url>
     <url>
+        <loc>https://aqoursoro.com/categories/</loc>
+    </url>
+    <url>
         <loc>https://aqoursoro.com/posts/</loc>
     </url>
     <url>
         <loc>https://aqoursoro.com/posts/example-first-post/</loc>
         <lastmod>2024-07-31</lastmod>
+    </url>
+    <url>
+        <loc>https://aqoursoro.com/tags/</loc>
     </url>
 </urlset>
