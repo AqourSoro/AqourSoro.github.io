@@ -45,7 +45,11 @@
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
                                     </span>
                                 </p>
-                                <p>Raw Tags: {{ page.tags | default([]) }}</p>
+                                {% if page.tags %}
+                                    <p>Tags Exist</p>
+                                {% else %}
+                                    <p>No Tags</p>
+                                {% endif %}
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
                         </article>
