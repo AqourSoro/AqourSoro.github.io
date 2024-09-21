@@ -45,11 +45,13 @@
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
                                     </span>
                                 </p>
-                                {% for tag in page.taxonomies.tags %}
-                                <span class="tag">{{ tag }}</span>
-                                {% else %}
-                                <p>No Tags Available</p>
-                                {% endfor %}
+                                {% if page.taxonomies["tags"] %}
+                                    <p>Tags: 
+                                    {% for tag in page.taxonomies["tags"] %}
+                                        <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                    </p>
+                                {% endif %}
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
                         </article>
