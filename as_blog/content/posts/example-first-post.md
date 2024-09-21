@@ -3,6 +3,7 @@ title = "Example First Post"
 date = 2024-07-31
 draft = false
 summary = "This is a summary of my first post."
+[taxonomies]
 tags = ["example"]
 +++
 
