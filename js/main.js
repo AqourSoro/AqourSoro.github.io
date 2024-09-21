@@ -1,5 +1,6 @@
 function loadContent(section, url) {
     const rightColumn = document.querySelector('.right-column'); // 选择右侧的内容区域
+    rightColumn.innerHTML = `<p>Loading...</p>`; // 在加载期间显示占位符
 
     if (section === 'posts') {
         fetch(url)
@@ -44,6 +45,7 @@ function loadContent(section, url) {
         history.pushState(null, null, url);
     }
 }
+
 
 
 let currentLanguage = 'en'; // 默认语言是English
