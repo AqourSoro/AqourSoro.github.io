@@ -43,6 +43,13 @@
                                 </h3>
                                 <p class="post-meta">
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
+                                    {% if page.tags %}
+                                        <p>Tags: 
+                                            {% for tag in page.tags %}
+                                                <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
                                     <span class="post-tags">
                                         {% if page.tags %}
                                             {% for tag in page.tags %}
@@ -50,9 +57,6 @@
                                             {% endfor %}
                                         {% endif %}
                                     </span>
-                                    {% if page.tags %}
-                                        <p>Tags: {{ page.tags | join(", ") }}</p>
-                                    {% endif %}
                                 </p>
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
