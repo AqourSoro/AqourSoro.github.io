@@ -43,17 +43,9 @@
                                 </h3>
                                 <p class="post-meta">
                                     <span class="post-date">{{ page.date | date(format="%d %b %Y") }}</span>
-                                    {% if page.tags %}
-                                        <p>Tags:
-                                            {% for tag in page.tags %}
-                                                <span class="tag">{{ tag }}</span>
-                                            {% endfor %}
-                                        </p>
-                                    {% else %}
-                                        <p>No Tags</p>
-                                    {% endif %}
                                     </span>
                                 </p>
+                                <p>Tags raw: {{ page.tags }}</p>
                             </header>
                             <p class="post-summary">{{ page.summary }}</p>
                         </article>
