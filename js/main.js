@@ -29,10 +29,10 @@ function loadContent(section, url) {
     const rightColumn = document.querySelector('.right-column'); // 页面内容区
     const spinner = document.getElementById('loading-spinner');  // 加载指示器
 
-    // 开始加载内容时显示加载指示器
+    // 开始加载内容时显示加载指示器，并清空错误页面
     spinner.style.display = 'block';
+    rightColumn.innerHTML = '';  // 确保在加载新内容时不显示旧的错误提示或内容
 
-    // 发起 fetch 请求来加载内容
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -41,31 +41,24 @@ function loadContent(section, url) {
             return response.text();
         })
         .then(html => {
-            // 成功加载内容后，解析 HTML
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const newContent = doc.querySelector('.right-column').innerHTML;
-            rightColumn.innerHTML = newContent;
+            rightColumn.innerHTML = newContent;  // 加载成功，显示新内容
 
-            // 隐藏加载指示器
-            spinner.style.display = 'none';
-
-            // 更新其他页面元素（如语言切换器）
-            updateLanguageSwitcher();
+            spinner.style.display = 'none';  // 隐藏加载指示器
+            updateLanguageSwitcher();  // 更新语言切换器状态
         })
         .catch(error => {
             console.error('Error loading content:', error);
-
-            // 仅在加载失败时显示错误页面，而不是在加载中途
-            rightColumn.innerHTML = `<p>Sorry, we couldn't load the content. Please try again later.</p>`;
-
-            // 隐藏加载指示器
-            spinner.style.display = 'none';
+            rightColumn.innerHTML = `<p>Sorry, we couldn't load the content. Please try again later.</p>`;  // 仅在加载失败时显示错误提示
+            spinner.style.display = 'none';  // 隐藏加载指示器
         });
 
     // 更新 URL
     history.pushState(null, null, url);
 }
+
 
 
 
