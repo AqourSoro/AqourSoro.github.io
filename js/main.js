@@ -26,13 +26,11 @@ function updateLanguageSwitcher() {
 }
 
 function loadContent(section, url) {
-    const rightColumn = document.querySelector('.right-column'); // 选择右侧的内容区域
-    rightColumn.innerHTML = `<p>Loading...</p>`; // 在加载期间显示占位符
+    const rightColumn = document.querySelector('.right-column');
+    rightColumn.innerHTML = `<p>Loading...</p>`;
 
-    // 在点击链接时，立即更新 URL
-    history.pushState(null, null, url);
-
-    fetch(url)
+    // 使用相对路径来避免跨域问题
+    fetch(url, { mode: 'same-origin' })
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -42,17 +40,20 @@ function loadContent(section, url) {
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const newContent = doc.querySelector('.right-column').innerHTML; // 获取新内容
+            const newContent = doc.querySelector('.right-column').innerHTML;
             rightColumn.innerHTML = newContent;
 
-            // 更新语言切换器
             updateLanguageSwitcher();
         })
         .catch(error => {
             console.error('Error loading content:', error);
             rightColumn.innerHTML = `<p>Error loading content.</p>`;
         });
+
+    // 更新 URL
+    history.pushState(null, null, url);
 }
+
 
 
 
