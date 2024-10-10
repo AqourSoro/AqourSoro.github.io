@@ -1,5 +1,7 @@
 # The URL the site will be built for
 base_url = "https://aqoursoro.com"
+title = "AqourSoro"
+description = "This is AqourSoro's personal site!"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -19,26 +21,6 @@ highlight_code = true
 # 多语言配置
 default_language = "en"
 
-[languages]
-[languages.en]
-title = "AqourSoro"
-description = "This is AqourSoro's personal site!"
-weight = 1
-
-[languages.en.extra]
-home = "Home"
-blog = "Blog"
-language_btn = "English"  # 在英文版显示“中文”按钮
-
-[languages.cn]
-title = "AqourSoro的个人网站"
-description = "这是AqourSoro的个人网站！"
-weight = 2
-
-[languages.cn.extra]
-home = "主页"
-blog = "博客"
-language_btn = "中文"  # 在中文版显示“English”按钮
 
 [extra]
 # Put all your custom variables here
