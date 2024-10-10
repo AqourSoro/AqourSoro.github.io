@@ -29,6 +29,9 @@ function loadContent(section, url) {
     const rightColumn = document.querySelector('.right-column'); // 选择右侧的内容区域
     rightColumn.innerHTML = `<p>Loading...</p>`; // 在加载期间显示占位符
 
+    // 在点击链接时，立即更新 URL
+    history.pushState(null, null, url);
+
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -44,15 +47,13 @@ function loadContent(section, url) {
 
             // 更新语言切换器
             updateLanguageSwitcher();
-
-            // 更新 URL 而不重新加载页面（确保只有内容成功加载后更新 URL）
-            history.pushState(null, null, url);
         })
         .catch(error => {
             console.error('Error loading content:', error);
             rightColumn.innerHTML = `<p>Error loading content.</p>`;
         });
 }
+
 
 
 // 初始化语言切换按钮状态
