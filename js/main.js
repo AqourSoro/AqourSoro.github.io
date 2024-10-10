@@ -26,11 +26,14 @@ function updateLanguageSwitcher() {
 }
 
 function loadContent(section, url) {
-    const rightColumn = document.querySelector('.right-column');
-    rightColumn.innerHTML = `<p>Loading...</p>`;
+    const rightColumn = document.querySelector('.right-column'); // 页面内容区
+    const spinner = document.getElementById('loading-spinner');  // 加载指示器
 
-    // 使用相对路径来避免跨域问题
-    fetch(url, { mode: 'same-origin' })
+    // 开始加载内容时显示加载指示器
+    spinner.style.display = 'block';
+
+    // 发起 fetch 请求来加载内容
+    fetch(url)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -38,21 +41,32 @@ function loadContent(section, url) {
             return response.text();
         })
         .then(html => {
+            // 成功加载内容后，解析 HTML
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const newContent = doc.querySelector('.right-column').innerHTML;
             rightColumn.innerHTML = newContent;
 
+            // 隐藏加载指示器
+            spinner.style.display = 'none';
+
+            // 更新其他页面元素（如语言切换器）
             updateLanguageSwitcher();
         })
         .catch(error => {
             console.error('Error loading content:', error);
-            rightColumn.innerHTML = `<p>Error loading content.</p>`;
+
+            // 仅在加载失败时显示错误页面，而不是在加载中途
+            rightColumn.innerHTML = `<p>Sorry, we couldn't load the content. Please try again later.</p>`;
+
+            // 隐藏加载指示器
+            spinner.style.display = 'none';
         });
 
     // 更新 URL
     history.pushState(null, null, url);
 }
+
 
 
 
