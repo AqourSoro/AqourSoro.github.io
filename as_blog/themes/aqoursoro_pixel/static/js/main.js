@@ -26,12 +26,8 @@ function updateLanguageSwitcher() {
 }
 
 function loadContent(section, url) {
-    const rightColumn = document.querySelector('.right-column'); // 页面内容区
-    const spinner = document.getElementById('loading-spinner');  // 加载指示器
-
-    // 开始加载内容时显示加载指示器，并清空错误页面
-    spinner.style.display = 'block';
-    rightColumn.innerHTML = '';  // 确保在加载新内容时不显示旧的错误提示或内容
+    // 不改变当前页面内容，直到新内容加载成功
+    const rightColumn = document.querySelector('.right-column');  // 页面内容区
 
     fetch(url)
         .then(response => {
@@ -44,21 +40,18 @@ function loadContent(section, url) {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const newContent = doc.querySelector('.right-column').innerHTML;
-            rightColumn.innerHTML = newContent;  // 加载成功，显示新内容
 
-            spinner.style.display = 'none';  // 隐藏加载指示器
-            updateLanguageSwitcher();  // 更新语言切换器状态
+            // 只有在成功加载后，才替换现有页面内容
+            rightColumn.innerHTML = newContent;
         })
         .catch(error => {
             console.error('Error loading content:', error);
-            rightColumn.innerHTML = `<p>Sorry, we couldn't load the content. Please try again later.</p>`;  // 仅在加载失败时显示错误提示
-            spinner.style.display = 'none';  // 隐藏加载指示器
+            // 如果加载失败，保持页面不变，什么都不做
         });
 
     // 更新 URL
     history.pushState(null, null, url);
 }
-
 
 
 
