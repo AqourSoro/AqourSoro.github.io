@@ -1,16 +1,15 @@
 // 切换语言的功能
 function toggleLanguage() {
     const currentUrl = window.location.href;
-    const isEnglish = currentUrl.includes('/en/');  // 检查当前是否是英文页面
+    const isEnglish = !currentUrl.includes('/cn/');  // 检查是否为默认语言（没有 /cn/）
 
-    // 生成新的语言 URL
     const newUrl = isEnglish
-        ? currentUrl.replace('/en/', '/cn/')  // 英文切换到中文
-        : currentUrl.replace('/cn/', '/en/'); // 中文切换到英文
+        ? currentUrl.replace('{{ config.base_url }}', '{{ config.base_url }}/cn')  // 默认语言切换到中文
+        : currentUrl.replace('/cn', '');  // 中文切换回默认语言
 
-    // 更新页面内容并切换到新的 URL
-    loadContent('page', newUrl);
+    window.location.href = newUrl;
 }
+
 
 // 更新语言切换按钮的功能
 function updateLanguageSwitcher() {
