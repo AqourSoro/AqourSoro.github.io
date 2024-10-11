@@ -1,28 +1,15 @@
 // 切换语言的功能
 function toggleLanguage() {
     const currentUrl = window.location.href;
-    const isEnglish = !currentUrl.includes('/cn/');  // 检查是否为默认语言（没有 /cn/）
+    const isEnglish = !currentUrl.includes('/cn/');  // 检查是否为默认语言
 
     const newUrl = isEnglish
-        ? currentUrl.replace('{{ config.base_url }}', '{{ config.base_url }}/cn')  // 默认语言切换到中文
-        : currentUrl.replace('/cn', '');  // 中文切换回默认语言
+        ? currentUrl.replace(window.location.origin, window.location.origin + '/cn')  // 切换到中文
+        : currentUrl.replace('/cn', '');  // 切换回默认语言
 
-    window.location.href = newUrl;
+    window.location.href = newUrl;  // 重定向到新的 URL
 }
 
-
-// 更新语言切换按钮的功能
-function updateLanguageSwitcher() {
-    const languageButton = document.getElementById('language-btn');
-    if (!languageButton) return;  // 确保按钮存在
-
-    // 检查当前语言，基于当前 URL
-    const currentUrl = window.location.href;
-    const isEnglish = currentUrl.includes('/en/');
-    
-    // 更新按钮文字
-    languageButton.innerText = isEnglish ? '中文' : 'English';  // 设置按钮文本
-}
 
 function loadContent(section, url) {
     // 不改变当前页面内容，直到新内容加载成功
@@ -56,15 +43,15 @@ function loadContent(section, url) {
 
 // 初始化语言切换按钮状态
 document.addEventListener('DOMContentLoaded', () => {
-    updateLanguageSwitcher();  // 页面加载时更新语言切换按钮的状态
 
     // 根据当前 URL 加载正确的页面内容（初始化）
     loadContent('page', window.location.href);
 
-    // 监听浏览器前进/后退按钮的点击事件
-    window.addEventListener('popstate', function(event) {
-        // 当点击后退按钮时重新加载正确的页面内容
-        loadContent('page', window.location.href);
-    });
+    
 });
 
+// 监听浏览器前进/后退按钮的点击事件
+window.addEventListener('popstate', function(event) {
+    // 当点击后退按钮时重新加载正确的页面内容
+    loadContent('page', window.location.href);
+});
