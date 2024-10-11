@@ -9,17 +9,21 @@ build_search_index = true
 
 theme = "aqoursoro_pixel"
 
+[markdown]
+highlight_code = true
+
+[languages.en]
+generate_feeds = true # there will be a feed for French content
+build_search_index = true
 taxonomies = [
     { name = "tags", feed = true },
 ]
 
-[markdown]
-highlight_code = true
+
 
 # 多语言配置
-default_language = "en"
 
-[languages.en.translations]
+[translations]
 title = "AqourSoro"
 welcome = "Welcome to my website!"
 description = "This is AqourSoro's personal site!"
