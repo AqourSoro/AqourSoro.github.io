@@ -55,8 +55,6 @@ function loadContent(section, url) {
 
 
 
-
-
 // 初始化语言切换按钮状态
 document.addEventListener('DOMContentLoaded', () => {
     updateLanguageSwitcher();  // 页面加载时更新语言切换按钮的状态

@@ -1,12 +1,10 @@
 # The URL the site will be built for
 base_url = "https://aqoursoro.com"
-title = "AqourSoro"
-description = "This is AqourSoro's personal site!"
 
-# Whether to automatically compile all Sass files in the sass directory
+# 是否自动编译所有 Sass 文件
 compile_sass = true
 
-# Whether to build a search index to be used later on by a JavaScript library
+# 是否构建搜索索引
 build_search_index = true
 
 theme = "aqoursoro_pixel"
@@ -21,6 +19,18 @@ highlight_code = true
 # 多语言配置
 default_language = "en"
 
+[languages.en.translations]
+title = "AqourSoro"
+welcome = "Welcome to my website!"
+description = "This is AqourSoro's personal site!"
+home = "Home"
+blog = "Blog"
+language = "English"
 
-[extra]
-# Put all your custom variables here
+[languages.cn.translations]
+title = "AqourSoro"
+welcome = "欢迎来到我的网站！"
+description = "这是AqourSoro的个人网站！"
+home = "主页"
+blog = "博客"
+language = "中文"

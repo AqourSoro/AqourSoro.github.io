@@ -25,17 +25,17 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
-                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
-                    <li><a id="language-btn" onclick="toggleLanguage(); return false;">English</a></li>
+                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home") }}</a></li>
+                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog") }}</a></li>
+                    <li><a id="language-btn" onclick="toggleLanguage(); return false;">{{ trans(key="language") }}</a></li>
 
                 </ul>
             </nav>
         </div>
         <main class="container">
             <section id="content-section" class="content">
-                <h1 id="welcome-text">欢迎来到我的博客！</h1>
-                <p id="home-content">这是主页内容。</p>
+                <h1 id="welcome-text">{{ trans(key="welcome") }}</h1>
+                <p id="home-content">{{ trans(key="description") }}</p>
             </section>
         </main>
     </div>
