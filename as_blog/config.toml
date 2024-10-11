@@ -12,13 +12,14 @@ theme = "aqoursoro_pixel"
 [markdown]
 highlight_code = true
 
+[languages]
+
 [languages.en]
 generate_feeds = true # there will be a feed for French content
 build_search_index = true
 taxonomies = [
     { name = "tags", feed = true },
 ]
-
 
 
 # 多语言配置

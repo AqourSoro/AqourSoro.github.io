@@ -14,8 +14,10 @@
         <section class="intro">
             <img src="{{ get_url(path="images/aqoursoro_pat.png") }}" alt="Avatar" class="avatar">
         </section>
+
         <section class="content">
             <p>Be water my friend.</p>
+            <p>当前语言: {{ lang }}</p>
         </section>
         <footer class="footer">
             {% include "_partials/footer.html" %}
@@ -27,6 +29,7 @@
                 <ul>
                     <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home") }}</a></li>
                     <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog") }}</a></li>
+                    <button id="language-btn" onclick="toggleLanguage()">切换语言</button>
                     <li><a id="language-btn" onclick="toggleLanguage(); return false;">{{ trans(key="language") }}</a></li>
 
                 </ul>
