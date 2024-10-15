@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     {% include "_partials/head.html" %}
 </head>
@@ -27,18 +26,22 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home") }}</a></li>
-                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog") }}</a></li>
-                    <button id="language-btn" onclick="toggleLanguage()">切换语言</button>
-                    <li><a id="language-btn" onclick="toggleLanguage(); return false;">{{ trans(key="language") }}</a></li>
-
+                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home", lang=lang) }}</a></li>
+                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog", lang=lang) }}</a></li>
+                    <li>
+                        {% if lang == "en" %}
+                            <a href="{{ get_url(path="cn/") }}">中文</a>
+                        {% else %}
+                            <a href="{{ get_url(path="") }}">English</a>
+                        {% endif %}
+                    </li>
                 </ul>
             </nav>
         </div>
         <main class="container">
             <section id="content-section" class="content">
-                <h1 id="welcome-text">{{ trans(key="welcome") }}</h1>
-                <p id="home-content">{{ trans(key="description") }}</p>
+                <h1 id="welcome-text">{{ trans(key="welcome", lang=lang) }}</h1>
+                <p id="home-content">{{ trans(key="description", lang=lang) }}</p>
             </section>
         </main>
     </div>

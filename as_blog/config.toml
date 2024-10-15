@@ -9,8 +9,12 @@ build_search_index = true
 
 theme = "aqoursoro_pixel"
 
+default_language = "en"
+
 [markdown]
 highlight_code = true
+
+
 
 [languages]
 
@@ -30,7 +34,14 @@ welcome = "Welcome to my website!"
 description = "This is AqourSoro's personal site!"
 home = "Home"
 blog = "Blog"
-language = "English"
+
+# 中文配置
+[languages.cn]
+generate_feeds = true
+build_search_index = false
+taxonomies = [
+    { name = "tags", feed = true },
+]
 
 [languages.cn.translations]
 title = "AqourSoro"
@@ -38,4 +49,3 @@ welcome = "欢迎来到我的网站！"
 description = "这是AqourSoro的个人网站！"
 home = "主页"
 blog = "博客"
-language = "中文"

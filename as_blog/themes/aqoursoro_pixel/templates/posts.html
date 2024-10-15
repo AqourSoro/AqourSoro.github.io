@@ -26,7 +26,13 @@
                 <ul>
                     <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
                     <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
-                    <li><a id="language-btn" onclick="toggleLanguage(); return false;">English</a></li>
+                    <li>
+                        {% if lang == "en" %}
+                            <a href="{{ get_url(path="cn/") }}">中文</a>
+                        {% else %}
+                            <a href="{{ get_url(path="") }}">English</a>
+                        {% endif %}
+                    </li>
                 </ul>
             </nav>
         </div>
