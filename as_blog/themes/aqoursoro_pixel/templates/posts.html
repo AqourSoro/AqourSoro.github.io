@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     {% include "_partials/head.html" %}
 </head>
@@ -24,13 +24,13 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">Home</a></li>
-                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">Blog</a></li>
+                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home", lang=lang) }}</a></li>
+                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog", lang=lang) }}</a></li>
                     <li>
                         {% if lang == "en" %}
-                            <a href="{{ get_url(path="cn/") }}">中文</a>
+                            <a href="{{ config.base_url }}/cn{{ current_path }}">中文</a>
                         {% else %}
-                            <a href="{{ get_url(path="") }}">English</a>
+                            <a href="{{ config.base_url }}{{ current_path | replace(from='/cn', to='') }}">English</a>
                         {% endif %}
                     </li>
                 </ul>
@@ -39,7 +39,7 @@
         
         <main class="container">
             <section class="content">
-                <h2>Blog Posts</h2>
+                <h2>{{ trans(key="posts_title", lang=lang) }}</h2>
                 <div class="post-list">
                     {% for page in section.pages %}
                         <article class="post-item">

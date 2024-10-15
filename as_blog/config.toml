@@ -34,6 +34,7 @@ welcome = "Welcome to my website!"
 description = "This is AqourSoro's personal site!"
 home = "Home"
 blog = "Blog"
+posts_title = "Blog Posts"
 
 # 中文配置
 [languages.cn]
@@ -49,3 +50,4 @@ welcome = "欢迎来到我的网站！"
 description = "这是AqourSoro的个人网站！"
 home = "主页"
 blog = "博客"
+posts_title = "博客文章"
