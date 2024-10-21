@@ -24,8 +24,14 @@
         <div class="nav-right">
             <nav>
                 <ul>
-                    <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home", lang=lang) }}</a></li>
-                    <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog", lang=lang) }}</a></li>
+                    {% if lang == 'en' %}
+                        <li><a id="home-btn" href="{{ config.base_url }}" onclick="loadContent('home', '{{ config.base_url }}'); return false;">{{ trans(key="home", lang=lang) }}</a></li>
+                        <li><a id="blog-btn" href="{{ config.base_url }}/posts" onclick="loadContent('posts', '{{ config.base_url }}/posts'); return false;">{{ trans(key="blog", lang=lang) }}</a></li>
+                    {% else %}
+                        <li><a id="home-btn" href="{{ config.base_url }}/cn" onclick="loadContent('home', '{{ config.base_url }}/cn'); return false;">{{ trans(key="home", lang=lang) }}</a></li>
+                        <li><a id="blog-btn" href="{{ config.base_url }}/cn/posts" onclick="loadContent('posts', '{{ config.base_url }}/cn/posts'); return false;">{{ trans(key="blog", lang=lang) }}</a></li>
+                    {% endif %}
+                    
                     <li>
                         {% if lang == "en" %}
                             <a href="{{ config.base_url }}/cn{{ current_path }}">中文</a>
