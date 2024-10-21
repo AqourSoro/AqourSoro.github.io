@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    {% include "_partials/head.html" %}
+</head>
+<body>
+    <div class="left-column">
+        <header class="header">
+            {% include "_partials/header.html" %}
+        </header>
+        
+        <!-- Table of Contents (TOC) -->
+        <nav class="toc">
+            <h2>Contents</h2>
+            {{ page.toc | safe }}
+        </nav>
+    </div>
+
+    <div class="right-column">
+        <main class="content">
+            <article>
+                <header>
+                    <h1>{{ page.title }}</h1>
+                    <p class="post-meta">
+                        <span class="post-date">{{ page.date | date(format="%d %B %Y") }}</span>
+                        <span class="post-tags">
+                            {% for tag in page.taxonomies.tags %}
+                                <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </span>
+                    </p>
+                </header>
+                <div class="post-body">
+                    {{ page.content | safe }}
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        {% include "_partials/footer.html" %}
+    </footer>
+    
+    <script src="{{ get_url(path="js/main.js") }}"></script>
+</body>
+</html>
