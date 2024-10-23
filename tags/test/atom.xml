@@ -22,7 +22,8 @@
         <link rel="alternate" type="text/html" href="https://aqoursoro.com/posts/example-first-post/"/>
         <id>https://aqoursoro.com/posts/example-first-post/</id>
         
-        <content type="html" xml:base="https://aqoursoro.com/posts/example-first-post/">&lt;p&gt;This is the content of my first post.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://aqoursoro.com/posts/example-first-post/">&lt;h1 id=&quot;this-is-title&quot;&gt;This is Title&lt;&#x2F;h1&gt;
+&lt;p&gt;This is the content of my first post.&lt;&#x2F;p&gt;
 &lt;p&gt;Debug: This is the example-first&lt;&#x2F;p&gt;
 </content>
         
