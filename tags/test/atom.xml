@@ -22,9 +22,11 @@
         <link rel="alternate" type="text/html" href="https://aqoursoro.com/posts/example-first-post/"/>
         <id>https://aqoursoro.com/posts/example-first-post/</id>
         
-        <content type="html" xml:base="https://aqoursoro.com/posts/example-first-post/">&lt;h1 id=&quot;this-is-title&quot;&gt;This is Title&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://aqoursoro.com/posts/example-first-post/">&lt;h2 id=&quot;this-is-title-h2&quot;&gt;This is Title H2&lt;&#x2F;h2&gt;
 &lt;p&gt;This is the content of my first post.&lt;&#x2F;p&gt;
 &lt;p&gt;Debug: This is the example-first&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;this-is-title-h3&quot;&gt;This is title H3&lt;&#x2F;h3&gt;
+&lt;p&gt;what else?&lt;&#x2F;p&gt;
 </content>
         
     </entry>
