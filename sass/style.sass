@@ -43,6 +43,7 @@ body
     top: 0
     bottom: 0
     overflow-y: auto // 左侧内容单独滚动
+    border: none // 确保没有隐藏的边框
 
 .right-column
     background-color: $background-color
@@ -57,6 +58,7 @@ body
     overflow-y: auto // 右侧内容单独滚动
     box-sizing: border-box
     height: 100vh // 确保高度占满视口
+    border: none // 确保没有隐藏的边框
 
 
 h1, h2, h3, h4, h5, h6
@@ -73,11 +75,12 @@ h1, h2, h3, h4, h5, h6
     background-color: transparent
     color: $nav-text-color
     text-align: center
-    padding: 10px 0
+    padding: 0
     width: 100%
     margin: 0
     border: none
     box-shadow: none
+    box-sizing: border-box // 确保边框和内边距计算在宽度内
 
 .nav-right
     width: 100%
