@@ -153,6 +153,16 @@ h1, h2, h3, h4, h5, h6
     border-radius: 50%
     border: none
 
+.video-container
+    max-width: 600px // 最大宽度限制
+    width: 100%      // 父容器宽度自适应
+    margin: 0 auto   // 居中容器
+
+video
+    max-width: 100% // 视频宽度不能超过父容器
+    height: auto    // 按比例调整高度
+    display: block  // 避免视频周围多余空白
+
 h1, h2, h3, h4, h5, h6
     font-family: 'Fusion Pixel LATIN', sans-serif
 
@@ -197,7 +207,10 @@ nav ul li
     .logo
         max-width: 50px
         max-height: 50px
+    .video-container
+        max-width: 100% // 小屏幕下父容器宽度充满屏幕
     nav ul li
         display: block
         margin: 5px 0
+    
 

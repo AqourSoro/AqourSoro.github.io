@@ -152,6 +152,18 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 
+.video-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fusion Pixel LATIN", sans-serif;
 }
@@ -210,6 +222,10 @@ nav ul li {
   .logo {
     max-width: 50px;
     max-height: 50px;
+  }
+
+  .video-container {
+    max-width: 100%;
   }
 
   nav ul li {
