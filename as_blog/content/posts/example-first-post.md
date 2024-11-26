@@ -14,6 +14,8 @@ This article is created to help test the Table of Contents (TOC) and ensure prop
 
 Table of Contents should provide an overview of all major sections and subsections in a hierarchical format. Let's dive into the details!
 
+![Test Image](/images/yellow.gif)
+
 ---
 
 ## Understanding the Purpose of Testing
@@ -25,6 +27,11 @@ This section provides an overview of why testing TOC and its associated renderin
 - **Navigation**: TOC allows users to jump to the desired section instantly.
 - **Clarity**: It helps users understand the scope of the article at a glance.
 - **SEO Benefits**: Search engines also benefit from a structured outline, improving rankings.
+
+<video controls>
+   <source src="/videos/Test.mp4" type="video/mp4">
+   Not able to display video on your browser!
+</video>
 
 ---
 
@@ -58,6 +65,7 @@ This section delves into advanced features and tests their compatibility with th
 Some articles may have sections that are dynamically generated, such as a list of related posts or external links. Ensuring these sections integrate seamlessly with the TOC is essential.
 
 Here’s an example of a dynamic list:
+
 - Related Article 1: *"How to Optimize TOCs for Blogs"*
 - Related Article 2: *"Understanding Markdown Syntax for Headings"*
 - Related Article 3: *"Improving Accessibility in Web Content"*
@@ -81,6 +89,7 @@ Testing different styles ensures that the TOC is both functional and aesthetical
 Testing the TOC ensures your blog provides an excellent user experience. It not only improves navigation but also adds professionalism to your site.
 
 By the end of this testing process, your TOC should:
+
 - Render all heading levels correctly.
 - Display nested headings as intended.
 - Support dynamic and static content seamlessly.
