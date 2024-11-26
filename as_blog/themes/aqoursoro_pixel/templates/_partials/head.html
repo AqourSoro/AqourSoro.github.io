@@ -1,4 +1,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ config.title }}</title>
+<title>
+    {% if page is defined and page.title %}
+        {{ page.title }}
+    {% elif section is defined and section.title %}
+        {{ section.title }}
+    {% else %}
+        {{ trans(key="title", lang=lang) }}
+    {% endif %}
+</title>
+
+<link rel="icon" type="image/png" href="{{ get_url(path="images/aqoursoro_pt.png") }}">
 <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}">

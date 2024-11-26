@@ -29,7 +29,7 @@ taxonomies = [
 # 多语言配置
 
 [translations]
-title = "AqourSoro"
+title = "AqourSoro Zone"
 welcome = "Welcome to my website!"
 description = "This is AqourSoro's personal site!"
 home = "Home"
@@ -45,7 +45,7 @@ taxonomies = [
 ]
 
 [languages.cn.translations]
-title = "AqourSoro"
+title = "AqourSoro之域"
 welcome = "欢迎来到我的网站！"
 description = "这是AqourSoro的个人网站！"
 home = "主页"

@@ -1,7 +1,7 @@
 
 // 动态加载页面内容
 function loadContent(section, url) {
-    const rightColumn = document.querySelector('.right-column');  // 页面内容区
+    const rightColumn = document.querySelector('.right-column'); // 页面内容区
 
     fetch(url)
         .then(response => {
@@ -13,10 +13,16 @@ function loadContent(section, url) {
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const newContent = doc.querySelector('.right-column').innerHTML;
 
-            // 只有在成功加载后，才替换现有页面内容
+            // 更新右侧内容
+            const newContent = doc.querySelector('.right-column').innerHTML;
             rightColumn.innerHTML = newContent;
+
+            // 更新标题
+            const newTitle = doc.querySelector('title')?.innerText;
+            if (newTitle) {
+                document.title = newTitle; // 更新当前网页的标题
+            }
         })
         .catch(error => {
             console.error('Error loading content:', error);
@@ -25,6 +31,7 @@ function loadContent(section, url) {
     // 更新 URL
     history.pushState(null, null, url);
 }
+
 
 // 初始化页面语言切换按钮
 document.addEventListener('DOMContentLoaded', () => {
