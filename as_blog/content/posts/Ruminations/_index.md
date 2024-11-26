@@ -1,5 +1,5 @@
 ---
-title: "Article List"
+title: "Ruminations"
 transparent: true
 template: "posts.html"
 ---
