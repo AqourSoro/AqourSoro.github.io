@@ -19,10 +19,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://aqoursoro.com/cn/posts/example-first-post/"/>
-        <id>https://aqoursoro.com/cn/posts/example-first-post/</id>
+        <link rel="alternate" type="text/html" href="https://aqoursoro.com/cn/posts/tests/example-first-post/"/>
+        <id>https://aqoursoro.com/cn/posts/tests/example-first-post/</id>
         
-        <content type="html" xml:base="https://aqoursoro.com/cn/posts/example-first-post/">&lt;h1 id=&quot;zhe-shi-biao-ti&quot;&gt;这是标题&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://aqoursoro.com/cn/posts/tests/example-first-post/">&lt;h1 id=&quot;zhe-shi-biao-ti&quot;&gt;这是标题&lt;&#x2F;h1&gt;
 &lt;p&gt;这是我第一篇博文的内容。&lt;&#x2F;p&gt;
 &lt;p&gt;Debug: This is the example-first&lt;&#x2F;p&gt;
 </content>

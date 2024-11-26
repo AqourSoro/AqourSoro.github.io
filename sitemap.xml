@@ -7,10 +7,16 @@
         <loc>https://aqoursoro.com/cn/</loc>
     </url>
     <url>
+        <loc>https://aqoursoro.com/cn/page/1/</loc>
+    </url>
+    <url>
         <loc>https://aqoursoro.com/cn/posts/</loc>
     </url>
     <url>
-        <loc>https://aqoursoro.com/cn/posts/example-first-post/</loc>
+        <loc>https://aqoursoro.com/cn/posts/tests/</loc>
+    </url>
+    <url>
+        <loc>https://aqoursoro.com/cn/posts/tests/example-first-post/</loc>
         <lastmod>2024-07-31</lastmod>
     </url>
     <url>
@@ -23,10 +29,16 @@
         <loc>https://aqoursoro.com/cn/tags/shi-li/</loc>
     </url>
     <url>
+        <loc>https://aqoursoro.com/page/1/</loc>
+    </url>
+    <url>
         <loc>https://aqoursoro.com/posts/</loc>
     </url>
     <url>
-        <loc>https://aqoursoro.com/posts/example-first-post/</loc>
+        <loc>https://aqoursoro.com/posts/tests/</loc>
+    </url>
+    <url>
+        <loc>https://aqoursoro.com/posts/tests/example-first-post/</loc>
         <lastmod>2024-07-31</lastmod>
     </url>
     <url>

@@ -19,10 +19,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://aqoursoro.com/posts/example-first-post/"/>
-        <id>https://aqoursoro.com/posts/example-first-post/</id>
+        <link rel="alternate" type="text/html" href="https://aqoursoro.com/posts/tests/example-first-post/"/>
+        <id>https://aqoursoro.com/posts/tests/example-first-post/</id>
         
-        <content type="html" xml:base="https://aqoursoro.com/posts/example-first-post/">&lt;h1 id=&quot;welcome-to-the-toc-testing-article&quot;&gt;Welcome to the TOC Testing Article&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://aqoursoro.com/posts/tests/example-first-post/">&lt;h1 id=&quot;welcome-to-the-toc-testing-article&quot;&gt;Welcome to the TOC Testing Article&lt;&#x2F;h1&gt;
 &lt;p&gt;This article is created to help test the Table of Contents (TOC) and ensure proper rendering of headings and nested structures. It includes multiple levels of headings (H1, H2, H3, and H4) along with additional text to provide realistic testing conditions.&lt;&#x2F;p&gt;
 &lt;p&gt;Table of Contents should provide an overview of all major sections and subsections in a hierarchical format. Let&#x27;s dive into the details!&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;yellow.gif&quot; alt=&quot;Test Image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
