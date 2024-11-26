@@ -19,6 +19,7 @@ $button-hover-text-color: $text-color // 按钮悬停时文字颜色
 body
     font-family: 'Fusion Pixel LATIN', sans-serif
     background-image: url('../images/background_2.png')
+    background-position: top // 确保背景从顶部开始
     background-size: cover
     background-repeat: no-repeat
     background-attachment: fixed
@@ -27,37 +28,40 @@ body
     box-sizing: border-box
     display: flex
     flex-direction: row
-    height: 100vh // 页面高度占满视口
+    height: 100vh
     overflow: hidden // 禁止整体页面滚动
+    
 
 .left-column
     background-color: rgba(121, 73, 109, 0.7)
     color: $text-color
-    width: 40% // 左侧固定宽度
-    position: fixed // 固定左侧
-    top: 0
-    bottom: 0
-    overflow-y: auto // 左侧内容单独滚动
+    width: 40% // 保持左侧宽度比例
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     text-align: center
-    padding: 20px
+    position: fixed // 确保左侧固定位置
+    top: 0
+    bottom: 0
+    overflow-y: auto // 左侧内容单独滚动
+    border: none // 确保没有隐藏的边框
 
 .right-column
     background-color: $background-color
     color: #333
-    width: 60% // 右侧占剩余宽度
-    margin-left: 40% // 避免右侧内容被左侧覆盖
-    overflow-y: auto // 右侧内容单独滚动
+    width: 60% // 保持右侧宽度比例
+    margin-left: 40% // 避免右侧内容与左侧重叠
     padding: 20px
-    box-sizing: border-box
-    height: 100vh // 高度占满视口
     display: flex
     flex-direction: column
     justify-content: flex-start
     align-items: stretch
+    overflow-y: auto // 右侧内容单独滚动
+    box-sizing: border-box
+    height: 100vh // 确保高度占满视口
+    border: none // 确保没有隐藏的边框
+
 
 h1, h2, h3, h4, h5, h6
     text-align: center
@@ -73,11 +77,12 @@ h1, h2, h3, h4, h5, h6
     background-color: transparent
     color: $nav-text-color
     text-align: center
-    padding: 10px 0
+    padding: 0
     width: 100%
     margin: 0
     border: none
     box-shadow: none
+    box-sizing: border-box // 确保边框和内边距计算在宽度内
 
 .nav-right
     width: 100%
@@ -176,27 +181,23 @@ nav ul li
 
 @media (max-width: 768px)
     body
-        flex-direction: column // 从横向布局切换为纵向布局
-        overflow: auto // 允许整体滚动
+        flex-direction: column // 移动端上下排列
+        overflow: auto // 移动端允许整体滚动
     .left-column, .right-column
-        width: 100%
+        width: 100% // 两栏占满宽度
         height: auto
         position: relative // 取消固定定位
-        overflow-y: visible // 内容自然滚动
+        overflow-y: visible // 允许自然滚动
     .container
-        width: 90% // 保持已有宽度
-        padding: 10px // 保持已有内边距
+        width: 90% // 保留原始内边距优化
+        padding: 10px
     .avatar
         width: 100px
         height: 100px
     .logo
         max-width: 50px
         max-height: 50px
-    nav ul
-        list-style: none
-        padding: 0
-        margin: 0
     nav ul li
-        display: block // 保持垂直排列
+        display: block
         margin: 5px 0
 
