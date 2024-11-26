@@ -25,6 +25,7 @@
         <content type="html" xml:base="https://aqoursoro.com/posts/example-first-post/">&lt;h1 id=&quot;welcome-to-the-toc-testing-article&quot;&gt;Welcome to the TOC Testing Article&lt;&#x2F;h1&gt;
 &lt;p&gt;This article is created to help test the Table of Contents (TOC) and ensure proper rendering of headings and nested structures. It includes multiple levels of headings (H1, H2, H3, and H4) along with additional text to provide realistic testing conditions.&lt;&#x2F;p&gt;
 &lt;p&gt;Table of Contents should provide an overview of all major sections and subsections in a hierarchical format. Let&#x27;s dive into the details!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;yellow.gif&quot; alt=&quot;Test Image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;understanding-the-purpose-of-testing&quot;&gt;Understanding the Purpose of Testing&lt;&#x2F;h2&gt;
 &lt;p&gt;When building a blog or website, ensuring that your content structure is clear and navigable is essential. A well-functioning TOC enhances the reader&#x27;s experience by enabling quick navigation through the content.&lt;&#x2F;p&gt;
@@ -34,6 +35,10 @@
 &lt;li&gt;&lt;strong&gt;Clarity&lt;&#x2F;strong&gt;: It helps users understand the scope of the article at a glance.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;SEO Benefits&lt;&#x2F;strong&gt;: Search engines also benefit from a structured outline, improving rankings.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+&lt;video controls&gt;
+   &lt;source src=&quot;&#x2F;videos&#x2F;Test.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+   Not able to display video on your browser!
+&lt;&#x2F;video&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;common-challenges-in-toc-implementation&quot;&gt;Common Challenges in TOC Implementation&lt;&#x2F;h3&gt;
 &lt;p&gt;While TOCs are beneficial, implementing them comes with challenges, such as:&lt;&#x2F;p&gt;
