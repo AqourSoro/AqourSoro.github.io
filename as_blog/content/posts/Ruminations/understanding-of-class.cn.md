@@ -8,6 +8,8 @@ template = "article.html"
 tags = ["马克思主义", "阶级斗争", "哲学"]
 +++
 
+---
+---
 ## 序
 
 人类社会的历史就是阶级斗争的历史，这是马克思主义理论对人类社会发展的一项重要认识。作为一名学习马克思主义的学生和马克思主义者，若想以史为鉴，深入理解人类历史，就离不开对阶级斗争的研究。而要理解阶级斗争，则首先需要弄清“阶级”这一概念，尤其是阶级的起源、发展、消亡及其本质。只有透彻掌握这些内容，才能清晰地认识人类社会的演变以及共产主义的真正意义。
@@ -113,32 +115,33 @@ tags = ["马克思主义", "阶级斗争", "哲学"]
 英特纳雄纳尔，就一定要实现！
 
 ---
+---
 
 
 ## 参考文献
 
-[^1]: [马克思，《德意志意识形态》](https://www.marxists.org/chinese/marx-engels/03/002.htm)
+[^1] [马克思，《德意志意识形态》](https://www.marxists.org/chinese/marx-engels/03/002.htm)
 
-[^2]: [恩格斯，《家庭、私有制和国家的起源》](https://www.marxists.org/chinese/marx-engels/21/005.htm)
+[^2] [恩格斯，《家庭、私有制和国家的起源》](https://www.marxists.org/chinese/marx-engels/21/005.htm)
 
-[^3]: [恩格斯，《自然辩证法》](https://www.marxists.org/chinese/marx-engels/31.htm) 
+[^3] [恩格斯，《自然辩证法》](https://www.marxists.org/chinese/marx-engels/31.htm) 
 
-[^4]: [马克思，《资本论》第一卷](https://www.marxists.org/chinese/marx/capital/index.htm)
+[^4] [马克思，《资本论》第一卷](https://www.marxists.org/chinese/marx/capital/index.htm)
 
-[^5]: [马克思、恩格斯，《共产党宣言》](https://www.marxists.org/chinese/marx/01.htm)
+[^5] [马克思、恩格斯，《共产党宣言》](https://www.marxists.org/chinese/marx/01.htm)
 
-[^6]: [列宁，《列宁选集》](https://www.marxists.org/chinese/lenin/selectedworks/selectedWorks-index.htm)  
+[^6] [列宁，《列宁选集》](https://www.marxists.org/chinese/lenin/selectedworks/selectedWorks-index.htm)  
 
-[^7]: [毛泽东，《矛盾论》](https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-193708.htm)
+[^7] [毛泽东，《矛盾论》](https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-193708.htm)
 
-[^8]: [恩格斯，《路德维希·费尔巴哈和德国古典哲学的终结》](https://www.marxists.org/chinese/engels/marxist.)
+[^8] [恩格斯，《路德维希·费尔巴哈和德国古典哲学的终结》](https://www.marxists.org/chinese/engels/marxist.)
 
-[^9]: [恩格斯，《反杜林论》](https://www.marxists.org/chinese/marx-engels/20/index.htm)  
+[^9] [恩格斯，《反杜林论》](https://www.marxists.org/chinese/marx-engels/20/index.htm)  
 
-[^10]: [列宁，《国家与革命》](https://www.marxists.org/chinese/lenin/191708-09/index.htm)  
+[^10] [列宁，《国家与革命》](https://www.marxists.org/chinese/lenin/191708-09/index.htm)  
 
-[^11]: [毛泽东，《论人民民主专政》](https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-19490630.htm) 
+[^11] [毛泽东，《论人民民主专政》](https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-19490630.htm) 
 
-[^12]: [列宁，《无产阶级革命和叛徒考茨基》](https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm)  
+[^12] [列宁，《无产阶级革命和叛徒考茨基》](https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm)  
 
-[^13]: [毛泽东，《湖南农民运动考察报告》](https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-192703.htm)
+[^13] [毛泽东，《湖南农民运动考察报告》](https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-192703.htm)
